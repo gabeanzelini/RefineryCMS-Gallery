@@ -1,14 +1,14 @@
-<% content_for :body_content_title, @birth.name %>
+<% content_for :body_content_title, @photo.name %>
 <% content_for :body_content_left do %>
-  <article class="birth">
+  <article class="photo">
     <p>
-      <small><%= t('.length') %> <%= @birth.length %></small>
+      <small><%= t('.length') %> <%= @photo.length %></small>
     </p>
     <p>
-      <small><%= t('.weight') %> <%= @birth.weight %></small>
+      <small><%= t('.weight') %> <%= @photo.weight %></small>
     </p>
     <p>
-      <%= link_to t('.back_to_index'), births_url %>
+      <%= link_to t('.back_to_index'), photos_url %>
     </p>
   </article>
 <% end %>
