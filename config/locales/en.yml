@@ -2,30 +2,35 @@ en:
   plugins:
     refinerycms_galleries:
       title: Gallery
-      description: Provides a simple photo galleries
+      description: Provides a simple gallery
   admin:
     photos:
       photo:
         view_live_html: "View this photo live <br/><em>(opens in a new window)</em>"
         edit: "Edit this photo"
         delete: "Remove this photo forever"
+        gallery_name: "Gallery Name"
       index:
         actions: Actions
-        create: "Add Photo"
+        create: "Add Birth"
+        birth: Births
         no_items: "Sorry, no results found."
-        no_items_yet: 'There are no photos yet. Click "Add Photos" to add your first photo.'
+        no_items_yet: 'There are no births yet. Click "Add Births" to add your first birth.'
   photos:
     show:
       back_to_index: "Back to all photos"
+      gallery_name: "Gallery Name"
     recent_posts:
       recent_posts: Recent Photos
     index:
+      gallery_name: "Gallery Name"
       read_more: Read more
       no_items_yet: There are no photos yet.
   activerecord:
     attributes:
       photo:
         title: Name
+        gallery_name: Gallery name
         image: &image Image
     models:
       photo: Photo
