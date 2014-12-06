@@ -1,0 +1,35 @@
+en:
+  plugins:
+    refinerycms_galleries:
+      title: Gallery
+      description: Provides a simple photo galleries
+  admin:
+    photos:
+      photo:
+        view_live_html: "View this photo live <br/><em>(opens in a new window)</em>"
+        edit: "Edit this photo"
+        delete: "Remove this photo forever"
+      index:
+        actions: Actions
+        create: "Add Photo"
+        no_items: "Sorry, no results found."
+        no_items_yet: 'There are no photos yet. Click "Add Photos" to add your first photo.'
+  photos:
+    show:
+      back_to_index: "Back to all photos"
+    recent_posts:
+      recent_posts: Recent Photos
+    index:
+      read_more: Read more
+      no_items_yet: There are no photos yet.
+  activerecord:
+    attributes:
+      photo:
+        title: Name
+        image: &image Image
+    models:
+      photo: Photo
+  shared:
+    admin:
+      image_picker:
+        image: *image

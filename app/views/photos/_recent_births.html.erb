@@ -1,0 +1,10 @@
+<nav id="recent_births">
+  <h2><%= t('.recent_posts') %></h2>
+  <ul>
+    <% @births.each do |item| %>
+      <li>
+        <%= link_to item.name, birth_url(item) %>
+      </li>
+    <% end %>
+  </ul>
+</nav>

@@ -1,0 +1,20 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>'>
+  <span class='title'>
+    <%= birth.name %>
+    <span class="preview">
+      <%= t('.birth_date') %> <%= l(birth.birth_date, :format => :short) %>
+    </span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag('application_go.png'), birth_url(birth),
+                :title => t('.view_live_html'),
+                :target => "_blank" %>
+    <%= link_to refinery_icon_tag('application_edit.png'), edit_admin_birth_path(birth),
+                :title => t('.edit') %>
+    <%= link_to refinery_icon_tag('delete.png'), admin_birth_path(birth),
+                :class => "cancel confirm-delete",
+                :title => t('.delete'),
+                :method => :delete,
+                :confirm => t('shared.admin.delete.message', :title => birth.name) %>
+  </span>
+</li>

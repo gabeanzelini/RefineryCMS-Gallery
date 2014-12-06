@@ -1,0 +1,17 @@
+<% content_for :body_content_title, @birth.name %>
+<% content_for :body_content_left do %>
+  <article class="birth">
+    <p>
+      <small><%= t('.length') %> <%= @birth.length %></small>
+    </p>
+    <p>
+      <small><%= t('.weight') %> <%= @birth.weight %></small>
+    </p>
+    <p>
+      <%= link_to t('.back_to_index'), births_url %>
+    </p>
+  </article>
+<% end %>
+<% content_for :body_content_right, render(:partial => 'recent_posts') %>
+
+<%= render :partial => "/shared/content_page" %>

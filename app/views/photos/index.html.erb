@@ -1,0 +1,16 @@
+<% content_for :body_content_title do %>
+  <%= t('plugins.refinerycms_galleries.title') %>
+<% end %>
+
+<h1 class="full">Morton General Hospital Galleries</h1>
+
+<% content_for :body_content_left do %>
+  <%= @page[:body] if @births.offset == 0 %>
+  <% if @photos.any? %>
+    
+  <% else %>
+    <p><em><%= t('.no_items_yet') %></em></p>
+  <% end %>
+<% end -%>
+
+<%= render :partial => "/shared/content_page" %>
