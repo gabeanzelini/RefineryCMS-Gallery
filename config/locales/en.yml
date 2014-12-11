@@ -12,7 +12,7 @@ en:
         gallery_name: "Gallery Name"
       index:
         actions: Actions
-        create: "Add Birth"
+        create: "Add Photo"
         birth: Births
         no_items: "Sorry, no results found."
         no_items_yet: 'There are no births yet. Click "Add Births" to add your first birth.'
