@@ -1,0 +1,20 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>'>
+  <span class='title'>
+    <%= photo.name %>
+    <span class="preview">
+      <%= t('.gallery_name') %> <%= l(photo.gallery_name, :format => :short) %>
+    </span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag('application_go.png'), photo_url(photo),
+                :title => t('.view_live_html'),
+                :target => "_blank" %>
+    <%= link_to refinery_icon_tag('application_edit.png'), edit_admin_photo_path(photo),
+                :title => t('.edit') %>
+    <%= link_to refinery_icon_tag('delete.png'), admin_photo_path(photo),
+                :class => "cancel confirm-delete",
+                :title => t('.delete'),
+                :method => :delete,
+                :confirm => t('shared.admin.delete.message', :title => photo.name) %>
+  </span>
+</li>
