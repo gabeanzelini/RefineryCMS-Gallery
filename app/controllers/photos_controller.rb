@@ -14,7 +14,7 @@ class PhotosController < ApplicationController
 protected
 
   def find_galleries
-    @galleries = Photos.all.map(&:gallery_name)
+    @galleries = Photo.all.map(&:gallery_name)
   end
 
   def find_photos
