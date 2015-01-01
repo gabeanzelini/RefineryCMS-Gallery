@@ -16,7 +16,7 @@ protected
 
   def find_galleries
     @gallery_names = Photo.all.map(&:gallery_name)
-
+    @galleries = {}
     for g in @gallery_names do
       @galleries[g] = Photo.where(gallery_name: g).first()
     end

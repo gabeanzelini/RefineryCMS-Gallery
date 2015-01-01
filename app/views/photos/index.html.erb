@@ -4,7 +4,7 @@
     <% if @galleries.any? %>
         <% for g in @gallery_names %>
             <div style="width: 200px; float: left;">
-                <img src="<%= @galleries[g].image.url %>" style="width: 100%">
+                <img src="<%= @galleries[g].image.url" style="width: 100%">
                 <%= g %>
             </div>
         <% end %>
