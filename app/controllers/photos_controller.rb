@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    # render 'show'
+    @photo = Photo.where(slug=params[:slug]).first()
   end
 
 protected
