@@ -7,6 +7,7 @@
               <img src="<%= photo.image.url %>" data-title="<%= photo.title %>">
           <% end %>
       </div>
+          <link rel="stylesheet" href="/javascripts/galleria/themes/classic/galleria.classic.css" type="text/css"/>
           <%= javascript_include_tag 'galleria-1.4.2.min.js' %>
           <script>
             Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js');
