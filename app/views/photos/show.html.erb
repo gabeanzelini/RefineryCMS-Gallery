@@ -1,7 +1,7 @@
 <% content_for :body_content_title, @photo.name %>
 <% content_for :body_content_left do %>
   <article class="photo">
-      <p><img src="<%= @photo.image.url %>"></p>
+      <p><img src="<%= @photo.image.thumbnail %>"></p>
     <p>
       <%= link_to t('.back_to_index'), photos_url %>
     </p>
