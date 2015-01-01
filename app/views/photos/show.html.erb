@@ -1,31 +1,31 @@
 <% content_for :body_content_left do %>
-    <div class="content sub clearfix">
-        <div class="h-left">
-            <h3 class="alt">Galleries</h3>
-            <ul class="alt sub">
-                <% for g in @galleries %>
-                    <li><a href="/photos/<%= g %>"><%= g %></a></li>
-                <% end %>
-            </ul>
-        </div>
-        <div class="h-right">
-            <h1><%= @gallery_name %></h1>
-            <% if @photos.count > 0 %>
-                <div class="galleria" style="width: 700px; height: 400px; background: #000000;">
-                    <% for photo in @photos %>
-                        <img src="<%= photo.image.url %>" data-title="<%= photo.title %>">
-                    <% end %>
-                </div>
-                <%= javascript_include_tag 'galleria-1.4.2.min.js' %>
-                <script>
-                    Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js');
-                    Galleria.run('.galleria');
-                </script>
+    <div class="h-left">
+        <h3 class="alt">Galleries</h3>
+        <ul class="alt sub">
+            <% for g in @galleries %>
+                <li><a href="/photos/<%= g %>"><%= g %></a></li>
             <% end %>
-            <p>
-                <%= link_to t('.back_to_index'), photos_url %>
-            </p>
-        </div>
+        </ul>
+    </div>
+<% end %>
+<% content_for :body_content_right do %>
+    <div class="h-right">
+        <h1><%= @gallery_name %></h1>
+        <% if @photos.count > 0 %>
+            <div class="galleria" style="width: 700px; height: 400px; background: #000000;">
+                <% for photo in @photos %>
+                    <img src="<%= photo.image.url %>" data-title="<%= photo.title %>">
+                <% end %>
+            </div>
+            <%= javascript_include_tag 'galleria-1.4.2.min.js' %>
+            <script>
+                Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js');
+                Galleria.run('.galleria');
+            </script>
+        <% end %>
+        <p>
+            <%= link_to t('.back_to_index'), photos_url %>
+        </p>
     </div>
 <% end %>
 
