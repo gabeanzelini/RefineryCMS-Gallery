@@ -8,6 +8,7 @@ class PhotosController < ApplicationController
   end
 
   def show
+    @gallery_name = params[:gallery_name]
     # render 'show'
   end
 
