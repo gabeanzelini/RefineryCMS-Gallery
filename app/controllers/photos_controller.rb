@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   before_filter :find_page
-  before_filter :find_galleries, :only => [:index]
+  before_filter :find_galleries
   before_filter :find_photos, :only => [:show]
 
   def index
@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @photo = Photo.where(slug=params[:slug]).first()
+    # render 'show'
   end
 
 protected
