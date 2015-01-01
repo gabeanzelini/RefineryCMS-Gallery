@@ -12,7 +12,7 @@
     <div class="h-right">
         <h1><%= @gallery_name %></h1>
         <% if @photos.count > 0 %>
-            <div class="galleria" style="width: 700px; height: 400px; background: #ffffff">
+            <div class="galleria" style="width: 700px; height: 400px;">
                 <% for photo in @photos %>
                     <img src="<%= photo.image.url %>" data-title="<%= photo.title %>">
                 <% end %>
