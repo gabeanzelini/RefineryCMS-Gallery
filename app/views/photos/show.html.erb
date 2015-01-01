@@ -9,8 +9,9 @@
           </a>
           <% end %>
       </div>
+          <%= javascript_tag 'galleria-1.4.2.min.js' %>
           <script>
-            Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+            Galleria.loadTheme('/public/javascripts/galleria/themes/classic/galleria.classic.min.js');
             Galleria.run('.galleria');
           </script>
       <% end %>
