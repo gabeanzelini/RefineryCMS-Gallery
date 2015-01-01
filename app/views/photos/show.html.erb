@@ -2,12 +2,6 @@
 <% content_for :body_content_left do %>
   <article class="photo">
     <p>
-      <small><%= t('.length') %> <%= @photo.length %></small>
-    </p>
-    <p>
-      <small><%= t('.weight') %> <%= @photo.weight %></small>
-    </p>
-    <p>
       <%= link_to t('.back_to_index'), photos_url %>
     </p>
   </article>
