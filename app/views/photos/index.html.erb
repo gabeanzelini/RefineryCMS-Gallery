@@ -5,7 +5,7 @@
         <% for g in @gallery_names %>
             <div style="width: 200px; float: left;">
                 <a href="/photos/<%= g %>">
-                <img src="<%= @galleries[g].image.url %>" style="width: 100%">
+                <img src="<%= @galleries[g].image.url %>" style="height: 100px">
                 <%= g %>
                 </a>
             </div>
