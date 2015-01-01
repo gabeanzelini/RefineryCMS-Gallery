@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @gallery_name = params[:gallery_name]
+    @gallery_name = params[:slug]
     # render 'show'
   end
 
@@ -19,7 +19,7 @@ protected
   end
 
   def find_photos
-    @photos = Photo.where(gallery_name: params[:gallery_name])
+    @photos = Photo.where(gallery_name: params[:slug])
   end
 
   def find_page

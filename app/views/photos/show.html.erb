@@ -1,6 +1,7 @@
 <% content_for :body_content_title, @gallery_name %>
 <% content_for :body_content_left do %>
   <article class="photo">
+      <% if @photos.count > 0 %>
       <div class="galleria">
           <% for photo in @photos %>
           <a href="<%= photo.image.url %>">
@@ -8,6 +9,7 @@
           </a>
           <% end %>
       </div>
+      <% end %>
     <p>
       <%= link_to t('.back_to_index'), photos_url %>
     </p>
