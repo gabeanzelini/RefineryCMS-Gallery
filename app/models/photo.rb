@@ -3,7 +3,7 @@ class Photo < ActiveRecord::Base
 
   validates_presence_of :name, :gallery_name
 
-  has_friendly_id :name, :use_slug => true
+  has_friendly_id :gallery_name
 
   acts_as_indexed :fields => [:gallery_name]
 
