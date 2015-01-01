@@ -6,6 +6,9 @@
     </span>
   </span>
   <span class='actions'>
+    <%= link_to refinery_icon_tag('application_go.png'), photo_url(:slug => photo.gallery_name),
+                :title => t('.view_live_html'),
+                :target => "_blank" %>
     <%= link_to refinery_icon_tag('application_edit.png'), edit_admin_photo_path(photo),
                 :title => t('.edit') %>
     <%= link_to refinery_icon_tag('delete.png'), admin_photo_path(photo),
