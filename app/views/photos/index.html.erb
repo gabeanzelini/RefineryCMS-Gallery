@@ -1,15 +1,17 @@
-<% content_for :body_content_title do %>
-  <%= t('plugins.refinerycms_galleries.title') %>
-<% end %>
-
 <h1 class="full">Morton General Hospital Galleries</h1>
 
 <% content_for :body_content_left do %>
-  <% if @galleries.any? %>
-
-  <% else %>
-    <p><em><%= t('.no_items_yet') %></em></p>
-  <% end %>
+    <% if @galleries.any? %>
+        <% for g in @gallery_names %>
+            <div style="width: 200px; float: left;">
+                <img src="@galleries[g].image.url" style="width: 100%">
+                <%= g %>
+            </div>
+        <% end %>
+        <div class="clearfix"></div>
+    <% else %>
+        <p><em><%= t('.no_items_yet') %></em></p>
+    <% end %>
 <% end -%>
 
 <%= render :partial => "/shared/content_page" %>

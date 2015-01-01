@@ -15,7 +15,11 @@ class PhotosController < ApplicationController
 protected
 
   def find_galleries
-    @galleries = Photo.all.map(&:gallery_name)
+    @gallery_names = Photo.all.map(&:gallery_name)
+
+    for g in @gallery_names do
+      @galleries[g] = Photo.where(gallery_name: g).first()
+    end
   end
 
   def find_photos
