@@ -6,7 +6,7 @@ en:
   admin:
     photos:
       photo:
-        view_live_html: "View this photo live <br/><em>(opens in a new window)</em>"
+        view_live_html: "View this gallery live <br/><em>(opens in a new window)</em>"
         edit: "Edit this photo"
         delete: "Remove this photo forever"
         gallery_name: "Gallery Name"
@@ -18,7 +18,7 @@ en:
         no_items_yet: 'There are no photos yet. Click "Add Photo" to add your first photo.'
   photos:
     show:
-      back_to_index: "Back to all photos"
+      back_to_index: "Back to Galleries index"
       gallery_name: "Gallery Name"
     recent_posts:
       recent_posts: Recent Photos
