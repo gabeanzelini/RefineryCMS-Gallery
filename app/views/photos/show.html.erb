@@ -2,7 +2,7 @@
     <div class="h-left">
         <h3 class="alt">Galleries</h3>
         <ul class="alt sub">
-            <% for g in @galleries %>
+            <% for g in @gallery_names %>
                 <li><a href="/photos/<%= g %>"><%= g %></a></li>
             <% end %>
         </ul>
