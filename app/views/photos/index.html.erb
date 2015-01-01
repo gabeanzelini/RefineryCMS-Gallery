@@ -3,9 +3,9 @@
 <% content_for :body_content_left do %>
     <% if @galleries.any? %>
         <% for g in @gallery_names %>
-            <div style="width: 200px; float: left;">
+            <div style="float: left; margin-right: 20px;">
                 <a href="/photos/<%= g %>">
-                <img src="<%= @galleries[g].image.url %>" style="height: 100px">
+                <img src="<%= @galleries[g].image.url %>" style="height: 100px; display: block; margin-bottom: 5px;">
                 <%= g %>
                 </a>
             </div>
