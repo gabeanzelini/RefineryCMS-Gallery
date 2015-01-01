@@ -4,9 +4,7 @@
       <% if @photos.count > 0 %>
       <div class="galleria">
           <% for photo in @photos %>
-          <a href="<%= photo.image.url %>">
-            <img src="<%= photo.image.thumbnail(:small).url %>" data-title="<%= photo.title %>">
-          </a>
+              <img src="<%= photo.image.url %>" data-title="<%= photo.title %>">
           <% end %>
       </div>
           <%= javascript_include_tag 'galleria-1.4.2.min.js' %>
